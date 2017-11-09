@@ -1,24 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vws-tG-WPu">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Beach live-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="swift_slider_poc" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1K2-w8-4BH">
+                                <rect key="frame" x="0.0" y="64" width="375" height="133.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0Ce-Mh-Tuk">
+                                    <size key="itemSize" width="215" height="142.5"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BeachCollectionViewCell" id="rVA-S5-pMp" customClass="BeachCollectionViewCell" customModule="swift_slider_poc" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="-4.5" width="215" height="142.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="215" height="142.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TND-B0-HI6">
+                                                    <rect key="frame" x="0.0" y="0.0" width="215" height="142.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U00-nC-eAy">
+                                                    <rect key="frame" x="0.0" y="121.5" width="215" height="21"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" red="0.82337614839999995" green="0.89591060710000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="TND-B0-HI6" firstAttribute="leading" secondItem="rVA-S5-pMp" secondAttribute="leading" id="Mac-Fx-AkI"/>
+                                            <constraint firstAttribute="bottom" secondItem="U00-nC-eAy" secondAttribute="bottom" id="O3y-Kl-aEF"/>
+                                            <constraint firstItem="U00-nC-eAy" firstAttribute="leading" secondItem="rVA-S5-pMp" secondAttribute="leading" id="eg3-sv-FnE"/>
+                                            <constraint firstItem="TND-B0-HI6" firstAttribute="top" secondItem="rVA-S5-pMp" secondAttribute="top" id="fGU-xF-WgW"/>
+                                            <constraint firstAttribute="bottom" secondItem="TND-B0-HI6" secondAttribute="bottom" id="fKD-L9-jCG"/>
+                                            <constraint firstAttribute="trailing" secondItem="U00-nC-eAy" secondAttribute="trailing" id="uat-sJ-rGZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="TND-B0-HI6" secondAttribute="trailing" id="xhw-q2-4dq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="beachImage" destination="TND-B0-HI6" id="keE-vv-itN"/>
+                                            <outlet property="beachName" destination="U00-nC-eAy" id="cdO-8c-SVU"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="eIA-2b-mWe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Koe-dn-YYL"/>
+                                </connections>
+                            </collectionView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lfb-xU-PeA">
+                                <rect key="frame" x="0.0" y="212.5" width="375" height="267"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1K2-w8-4BH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4Ur-Zq-PE4"/>
+                            <constraint firstItem="1K2-w8-4BH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Fl4-NG-4Sw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lfb-xU-PeA" secondAttribute="trailing" id="REm-4Q-M65"/>
+                            <constraint firstItem="lfb-xU-PeA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RF7-mt-w97"/>
+                            <constraint firstItem="1K2-w8-4BH" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.2" id="cm5-Xc-VAx"/>
+                            <constraint firstItem="lfb-xU-PeA" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.4" id="eDt-dt-SLd"/>
+                            <constraint firstAttribute="trailing" secondItem="1K2-w8-4BH" secondAttribute="trailing" id="qri-pM-ybt"/>
+                            <constraint firstItem="lfb-xU-PeA" firstAttribute="top" secondItem="1K2-w8-4BH" secondAttribute="bottom" constant="15" id="zUZ-LX-9Ec"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Beach live" id="CJU-oM-F0q"/>
+                    <connections>
+                        <outlet property="collectionView" destination="1K2-w8-4BH" id="E9P-Q7-gV7"/>
+                        <outlet property="selectedBeach" destination="lfb-xU-PeA" id="cp5-X5-80f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1316" y="131.78410794602701"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="43N-78-Gwf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vws-tG-WPu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2Il-bp-qrc">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="8PW-7R-X0v"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WaA-kZ-43h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="539.20000000000005" y="132.23388305847078"/>
         </scene>
     </scenes>
 </document>
